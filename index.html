@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+  <meta charset="UTF-8">
+  <title>TitaMedia- Food</title>
+  
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
+<link rel="stylesheet" href="./style.css">
+<link rel="website icon" type="png" href="https://images.vexels.com/media/users/3/271221/isolated/preview/7f2a6afda16a3d7a5e04764fe57099cd-icono-detallado-de-hamburguesa.png">
+
+</head>
+<body>
+
+<nav class="navigation">
+  
+  <div class="logo"><img class="logo-img"  src="https://titamedia.com/wp-content/uploads/2021/05/Logo_TitaMediaNublack.png"/></div>
+
+  <ul>
+    <!-- <li class="nav-item perros"><a href="#content" >Todo<span class="linea" data-filter="perros-calientes" ></span></a></li> -->
+    <li class="nav-item "><a href="#content" ><span class="todo active" data-filter="comidas" >Todo</span></a></li>
+    <li class="nav-item "><a href="#content" ><span class="hamburguesa" data-filter="hamburguesa" >Hamburguesas</span></a></li>
+    <li class="nav-item "><a href="#content" ><span class="bebidas" data-filter="drink" >Bebida</span></a></li>
+    <li class="nav-item "><a href="#content" ><span class="pizzas" data-filter="pizzas" >Pizza</span></a></li>
+    <li class="nav-item "><a href="#content" ><span class="combos" data-filter="saludables-vegetales" >Vegetales</span></a></li>
+    <li class="nav-item "><a href="#content" ><span class="ensaladas" data-filter="ensaladas" >Ensaladas</span></a></li>
+
+    <!-- <li class="nav-item"><a href="#content">Productos<span class="linea"></a></li>
+    <li class="nav-item"><a href="#contacto">Contacto<span class="linea"></a></li> -->
+  </ul>
+</nav>
+<label for="menu-toogle" class="menu-toogle" onclick="abrirMenu()"></label>
+<div class="menu-movil">
+    <p class="tit-menu"></p>
+    <ul class="nav">
+      <li class="nav-item "><a href="#content" ><span class="todos active" data-filter="comida" >Todo</span></a></li>
+      <li class="nav-item "><a href="#content" ><span class="hamburguesas" data-filter="hamburguesas" >Hamburguesas</span></a></li>
+      <li class="nav-item "><a href="#content" ><span class="bebidass" data-filter="beber" >Bebida</span></a></li>
+      <li class="nav-item "><a href="#content" ><span class="pizzass" data-filter="pizza-hunt" >Pizza</span></a></li>
+      <li class="nav-item "><a href="#content" ><span class="comboss" data-filter="saludable-vegetales" >Vegetales</span></a></li>
+      <li class="nav-item "><a href="#content" ><span class="ensaladass" data-filter="salad" >Ensaladas</span></a></li>
+    </ul>
+</div>
+
+<div class="header">
+  <div class="header-cuerpo" id="header-cuerpo">
+    <h1>Explora más sobre nosotros</h1>
+    
+      <span class="header-btn">
+        <a href="">Visitar</a>
+        </span>
+    
+  </div>
+  
+</div>
+
+<div class="imagen img-dos"></div>
+
+
+<div class="contenedor container" id="content">
+  <div class="cont">
+
+    <div class="view-actions">
+      <button class="view-btn list-view " title="List View">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+          <line x1="8" y1="6" x2="21" y2="6" />
+          <line x1="8" y1="12" x2="21" y2="12" />
+          <line x1="8" y1="18" x2="21" y2="18" />
+          <line x1="3" y1="6" x2="3.01" y2="6" />
+          <line x1="3" y1="12" x2="3.01" y2="12" />
+          <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
+      </button>
+      <button class="view-btn grid-view active" title="Grid View">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" /></svg>
+      </button>
+    </div>
+    
+    <ul id="filters" class="clearfix">
+      <li><span class="filter active all" data-filter="comidas-rapidas">Todo</span></li>
+      <li><span class="filter hambur" data-filter="hamburguesa">Hamburguesas</span></li>
+      <li><span class="filter bebida" data-filter="bebida">Bebida</span></li>
+      <li><span class="filter pizza" data-filter="pizza">Pizza</span></li>
+      <li><span class="filter combo" data-filter="vegetales">Vegetales</span></li>
+      <li><span class="filter ensalada" data-filter="ensalada">Ensaladas</span></li>
+    </ul>
+      
+    <h2 class="resultado">Resultados</h2>
+    <div class="centrar">
+    <div class="spinner"></div>
+    </div>
+  
+    <div id="portfoliolist" class="Proyect-boxes jsGridView">    
+    </div>
+    <div class="verMas" >
+      <button class="learn-more" >
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <a class="button-text" id="ver">Mostrar más</a>
+      </button>
+    </div>
+  </div>
+
+</div>
+<div id="contacto">
+  <div class="contizq">
+      <div class="conttextoizq">
+          <h2>CONTACTA CON NOSOTROS</h2>
+          <p>Escríbenos a 3209034013</p>
+      </div>
+  </div>
+  <div class="contdcha">
+       <div class="conttextodcha">
+          <h2>¿SABES DÓNDE ESTAMOS?</h2>
+          <p>Localidad 1, Ocaña, Norte de Santander</p>
+      </div>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="item1">Enero 2023 &copy; Todos los derechos reservados</li>
+    <li class="item2"><a href="">Colombia<br>Ocaña - N. de Santander</a></li>
+    <li class="item3"><a href="">Créditos</a></li>
+    <li class="item4"><a href="">DV</a></li>
+    <!-- <li class="item5">
+      <img src="./img/logo_AB.jpg" alt="">
+      <img src="./img/logo_AB_euro.jpg" alt="">
+    </li> -->
+  </ul>
+</footer>
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script src="./grilla.js"></script>
+  <script>
+
+        const listView = document.querySelector('.list-view');
+        const gridView = document.querySelector('.grid-view');
+        const projectsList = document.querySelector('#portfoliolist');
+
+        const jsGridView = grilla[0].clase;
+        const jsListView = grilla[1].clase;
+        // console.log(jsListView);
+
+        listView.addEventListener('click', function () {
+          // console.log('listview');
+          gridView.classList.remove('active');
+          listView.classList.add('active');
+          projectsList.classList.remove(jsGridView);
+          projectsList.classList.add(jsListView);
+        });
+
+        gridView.addEventListener('click', function () {
+          // console.log('gridview');
+          gridView.classList.add('active');
+          listView.classList.remove('active');
+          projectsList.classList.remove(jsListView);
+          projectsList.classList.add(jsGridView);
+        });
+
+        // console.log(grilla);
+
+
+  </script>
+
+
+</body>
+</html>
