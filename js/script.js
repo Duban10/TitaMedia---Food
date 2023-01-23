@@ -178,55 +178,62 @@ const ensaladass = document.querySelector('.ensaladass').addEventListener('click
 
 
 function leerData(e) {
-  console.log(e.target.value);
+  
+  var entrada = e.target.textContent;
   const clase = document.querySelectorAll('#filters li span');
   clase.forEach( event => {
-    if(event.classList.contains('active')) {
-      event.classList.remove('active');
+    console.log(event.textContent);
+    if(event !== entrada) {
+        event.classList.remove('active');
     }
+    if(event.textContent == entrada) {
+      event.classList.add('active');
+      
+    }
+    
   })
 
-  const contenedor = document.querySelectorAll('#portfoliolist p');
-  contenedor.forEach( e => e.style.display = "none" );
+  // const contenedor = document.querySelectorAll('#portfoliolist p');
+  // contenedor.forEach( e => e.style.display = "none" );
 
-  if(e.target.classList.contains('todo') || e.target.classList.contains('todos')){
-    clase.forEach( event => {
-      if(event.classList.contains('all')) {
-        event.classList.add('active');
-      }
-    })
-  }else if(e.target.classList.contains('hamburguesa') || e.target.classList.contains('hamburguesas')){
-    clase.forEach( event => {
-      if(event.classList.contains('hambur')) {
-        event.classList.add('active');
-      }
-    })
-  }else if(e.target.classList.contains('bebidas') || e.target.classList.contains('bebidass')){
-    clase.forEach( event => {
-      if(event.classList.contains('bebida')) {
-        event.classList.add('active');
-      }
-    })
-  }else if(e.target.classList.contains('pizzas') || e.target.classList.contains('pizzass')){
-    clase.forEach( event => {
-      if(event.classList.contains('pizza')) {
-        event.classList.add('active');
-      }
-    })
-  }else if(e.target.classList.contains('combos') || e.target.classList.contains('comboss')){
-    clase.forEach( event => {
-      if(event.classList.contains('combo')) {
-        event.classList.add('active');
-      }
-    })
-  }else if(e.target.classList.contains('ensaladas') || e.target.classList.contains('ensaladass')){
-    clase.forEach( event => {
-      if(event.classList.contains('ensalada')) {
-        event.classList.add('active');
-      }
-    })
-  }
-  e.target.classList.add('active');
+  // if(e.target.classList.contains('todo') || e.target.classList.contains('todos')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('all')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }else if(e.target.classList.contains('hamburguesa') || e.target.classList.contains('hamburguesas')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('hambur')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }else if(e.target.classList.contains('bebidas') || e.target.classList.contains('bebidass')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('bebida')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }else if(e.target.classList.contains('pizzas') || e.target.classList.contains('pizzass')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('pizza')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }else if(e.target.classList.contains('combos') || e.target.classList.contains('comboss')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('combo')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }else if(e.target.classList.contains('ensaladas') || e.target.classList.contains('ensaladass')){
+  //   clase.forEach( event => {
+  //     if(event.classList.contains('ensalada')) {
+  //       event.classList.add('active');
+  //     }
+  //   })
+  // }
+  // e.target.classList.add('active');
 
   let url = '';
   const id = e.target.getAttribute('data-filter')

@@ -652,7 +652,7 @@ h2, p {
 		.portfolio .label-text {
 			color:#fff;
 			position: relative;
-			z-index:500;
+			z-index:8;
 			padding:5px 8px;
 		}
 			
