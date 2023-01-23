@@ -205,21 +205,23 @@ footer li a {
 }
 
 /* ---------------------------- MEDIA QUERY --------------- */
-@media (min-width: 0px) {
 
+@media (min-width: 0px) {
+  .conttextoizq, .conttextodcha {
+    margin: 8% auto;
+  }
   .conttextoizq h2 {
     font-size: 18px;
-    font-weight: bold;    
+    font-weight: bold;
     line-height: 1.2em;
-  }  
-  .conttextodcha h2{
+  }
+  .conttextodcha h2 {
     font-size: 18px;
-    font-weight: bold;    
+    font-weight: bold;
     line-height: 1.2em;
   }
 
   #filters li {
-   
     margin-top: 20px;
   }
 
@@ -311,27 +313,6 @@ footer li a {
     font-size: 18px;
   }
 
-  div.cuerpo {
-    height: 60em;
-  }
-  div.cuerpo .info {
-    width: 100%;
-    display: block;
-    height: 33.33%;
-  }
-  div.cuerpo .info .img-info .texto {
-    width: 90%;
-  }
-  div.cuerpo .uno .img {
-    background-size: 20em;
-  }
-  div.cuerpo .dos .img {
-    background-size: 15em;
-  }
-  div.cuerpo .tres .img {
-    background-size: 20em;
-  }
-
   footer li {
     display: block;
     padding: 1em 2em;
@@ -339,9 +320,6 @@ footer li a {
   footer li:last-child img {
     margin-right: 3px;
   }
-  
-   
-  
 }
 @media (min-width: 414px) {
   .navigation .logo img {
@@ -356,8 +334,6 @@ footer li a {
   .header .fle-drch {
     margin-right: 0.5em;
   }
-  
-  
 }
 @media (min-width: 480px) {
   .navigation .logo img {
@@ -367,7 +343,8 @@ footer li a {
     font-size: 50px;
   }
 
-  footer .item3, footer .item4 {
+  footer .item3,
+  footer .item4 {
     display: inline-block;
   }
   footer .item3::after {
@@ -382,7 +359,7 @@ footer li a {
   }
 
   .view-actions {
-    display: flex;  
+    display: flex;
     margin: 0 42%;
   }
 }
@@ -395,35 +372,35 @@ footer li a {
   }
 
   .view-actions {
-    display: flex;  
+    display: flex;
     margin: 0 43%;
   }
-
 }
-  @media (max-width: 770px){
-    .portfolio-wrapper{
-      margin-bottom: 35px;
-    }
-    .cont {
-      padding-top: 10px;
-    }
-    .view-actions {
-      display: flex;  
-      margin: 0 37%;
-    }
-    .header .header-cuerpo {
-      
-      left: 50%;
+@media (max-width: 770px) {
+  .portfolio-wrapper {
+    margin-bottom: 35px;
   }
-  
+  .cont {
+    padding-top: 10px;
   }
+  .view-actions {
+    display: flex;
+    margin: 0 37%;
+  }
+  .header .header-cuerpo {
+    left: 50%;
+  }
+}
 
 @media (min-width: 770px) {
+  .conttextoizq, .conttextodcha {
+    margin: 8% auto;
+  }
   .view-actions {
     display: flex;
     margin: 0 47%;
   }
-  
+
   .navigation .logo img {
     width: 200px;
   }
@@ -438,7 +415,6 @@ footer li a {
   .navigation {
     position: relative;
     background-color: transparent;
-    
   }
   .navigation .logo {
     width: 9em;
@@ -499,47 +475,50 @@ footer li a {
     background-size: 25em;
   }
 
-  .jsGridView{
+  .jsGridView {
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto;
     justify-content: center;
     gap: 35px;
     padding: 20px;
-  
   }
 }
 
-@media (min-width: 1300px) {	
-
+@media (min-width: 1300px) {
+  .conttextoizq, .conttextodcha {
+    margin: 8% auto;
+  }
   .view-actions {
-    display: flex;  
+    display: flex;
     margin: 0 47%;
   }
-  .container { 
-    width: 100%;     
+  .container {
+    width: 100%;
   }
-  
-  .jsGridView{
+
+  .jsGridView {
     grid-template-columns: auto auto auto;
   }
- 
 }
-@media (min-width: 1750px) {	
-
+@media (min-width: 1750px) {
+  .conttextoizq, .conttextodcha {
+    margin: 5% auto;
+  }
   .view-actions {
-    display: flex;  
+    display: flex;
     margin: 0 47%;
   }
-  .container { 
-    width: 100%;  
-    margin-top: -100px;   
+  .container {
+    width: 100%;
+    margin-top: -100px;
   }
-  
-  .jsGridView{
+
+  .jsGridView {
     grid-template-columns: auto auto auto auto;
   }
- 
 }
+
+
 /* ------------------------------------------------------------------------ */
 
 .resultado {
@@ -860,10 +839,10 @@ button {
   color:#d2393c;
   text-align: center;
   padding:2%;
-  margin:auto;
+  /* margin:auto; */
   font-family: "Montserrat", "Questrial";;
   font-size: 0.8em;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 
 
@@ -877,10 +856,10 @@ button {
   color:#ded6bf;
   text-align: center;
   padding:2%;
-  margin:auto;
+  /* margin:auto; */
   font-family: "Montserrat", "Questrial";;
   font-size: 0.em;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 
 .conttextodcha p{
