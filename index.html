@@ -140,38 +140,8 @@
 </footer>
 
 <!-- partial -->
-  <script  src="./js/script.js"></script>
-  <script src="./js/grilla.js"></script>
-  <script>
-
-        const listView = document.querySelector('.list-view');
-        const gridView = document.querySelector('.grid-view');
-        const projectsList = document.querySelector('#portfoliolist');
-
-        const jsGridView = grilla[0].clase;
-        const jsListView = grilla[1].clase;
-        // console.log(jsListView);
-
-        listView.addEventListener('click', function () {
-          // console.log('listview');
-          gridView.classList.remove('active');
-          listView.classList.add('active');
-          projectsList.classList.remove(jsGridView);
-          projectsList.classList.add(jsListView);
-        });
-
-        gridView.addEventListener('click', function () {
-          // console.log('gridview');
-          gridView.classList.add('active');
-          listView.classList.remove('active');
-          projectsList.classList.remove(jsListView);
-          projectsList.classList.add(jsGridView);
-        });
-
-        // console.log(grilla);
-
-
-  </script>
+  <script  src="./js/script.js" type="module"></script>
+  
 
 
 </body>

@@ -1,4 +1,6 @@
-var grilla = [
+// export const nombreCliente = 'Juan';
+
+export var grilla = [
     {
         'clase': 'jsGridView',
         'descripcion': 'grid'

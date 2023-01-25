@@ -1,12 +1,13 @@
-
+import { grilla } from "./grilla.js";
+// console.log(grilla);
 
 
 let canIm = 6;
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
-  url = 'https://api.unsplash.com/search/photos'
+  const key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
+  let url = 'https://api.unsplash.com/search/photos'
 
   
     fetch(`${url}?query=comida-rapida&client_id=${key}&per_page=${canIm}`)
@@ -56,7 +57,7 @@ function consulta(e){
   // console.log(id);
 
 
-  key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
+  const key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
   url = 'https://api.unsplash.com/search/photos'
 
   if(all.classList.contains('active')){
@@ -74,15 +75,15 @@ function consulta(e){
   }
     
   fetch(url)
-            .then((response) => response.json())
-                  .then( data => {
-                    
-                    // console.log('comprobando');
+          .then((response) => response.json())
+                .then( data => {
+                  
+                  // console.log('comprobando');
 
-                    // resultado = [...resultados, data.results] 
-                    resultado = data.results        
-                    mostrarResultados(resultado)
-                  } )
+                  // resultado = [...resultados, data.results] 
+                  resultado = data.results        
+                  mostrarResultados(resultado)
+                } )
   
 }
 
@@ -193,53 +194,13 @@ function leerData(e) {
     
   })
 
-  // const contenedor = document.querySelectorAll('#portfoliolist p');
-  // contenedor.forEach( e => e.style.display = "none" );
-
-  // if(e.target.classList.contains('todo') || e.target.classList.contains('todos')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('all')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }else if(e.target.classList.contains('hamburguesa') || e.target.classList.contains('hamburguesas')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('hambur')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }else if(e.target.classList.contains('bebidas') || e.target.classList.contains('bebidass')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('bebida')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }else if(e.target.classList.contains('pizzas') || e.target.classList.contains('pizzass')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('pizza')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }else if(e.target.classList.contains('combos') || e.target.classList.contains('comboss')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('combo')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }else if(e.target.classList.contains('ensaladas') || e.target.classList.contains('ensaladass')){
-  //   clase.forEach( event => {
-  //     if(event.classList.contains('ensalada')) {
-  //       event.classList.add('active');
-  //     }
-  //   })
-  // }
-  // e.target.classList.add('active');
 
   let url = '';
+  console.log(e.target);
   const id = e.target.getAttribute('data-filter')
-  // console.log(id);
+  // const id = e.target.textContent;
 
-  key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
+  const key = 'Ik_BbWw10NVmJdtfMKfBw-DIb8LY3Pt5FJaEZNkEegI'
   url = 'https://api.unsplash.com/search/photos'
 
   // let canIm = 3;
@@ -261,6 +222,32 @@ function leerData(e) {
             mostrarResultados(resultado)
           } )      
 }
+
+const listView = document.querySelector('.list-view');
+const gridView = document.querySelector('.grid-view');
+const projectsList = document.querySelector('#portfoliolist');
+
+const jsGridView = grilla[0].clase;
+const jsListView = grilla[1].clase;
+// console.log(jsListView);
+
+listView.addEventListener('click', function () {
+  // console.log('listview');
+  gridView.classList.remove('active');
+  listView.classList.add('active');
+  projectsList.classList.remove(jsGridView);
+  projectsList.classList.add(jsListView);
+});
+
+gridView.addEventListener('click', function () {
+  // console.log('gridview');
+  gridView.classList.add('active');
+  listView.classList.remove('active');
+  projectsList.classList.remove(jsListView);
+  projectsList.classList.add(jsGridView);
+});
+
+// console.log(grilla);
 
 
 
